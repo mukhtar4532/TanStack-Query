@@ -6,9 +6,11 @@ import { Footer } from "./Footer";
 export const MainLayout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div>
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
     </>
   );
 };
