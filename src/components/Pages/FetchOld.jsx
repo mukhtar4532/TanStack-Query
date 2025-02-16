@@ -8,9 +8,10 @@ export const FetchOld = () => {
   const getPosts = async () => {
     try {
       const res = await fetchPost();
-      console.log(res.data);
+      // console.log(res.data);
 
-      res.status === 200 ? setPosts(res.data) : [];
+      // res.status === 200 ? setPosts(res.data) : [];
+      setPosts(res);
     } catch (error) {
       console.log(error);
     }
@@ -20,12 +21,12 @@ export const FetchOld = () => {
     getPosts();
   }, []);
   return (
-    <>
+    <div>
       <ul className=" bg-slate-700 text-white flex flex-col gap-3 justify-center items-center">
         {posts.map((post) => {
           return <Card key={post.id} post={post} />;
         })}
       </ul>
-    </>
+    </div>
   );
 };
